@@ -1,0 +1,538 @@
+/*
+* Theme Name: Portal do Cliente
+* Theme URI: https://portaldocliente.com.br/
+* Author: Portal do Cliente
+* Author URI: https://portaldocliente.com.br/
+* Description: Desenvolvido pelo Action Labs
+* Version: 1.0.0
+*/
+
+/*** Fonte Roboto - google fonts ***/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+/*** Fonte Face - Avenir ***/
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('fonts/subset-AvenirLTStd-Roman.woff2') format('woff2'),
+        url('fonts/subset-AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('fonts/subset-AvenirLTStd-Black.woff2') format('woff2'),
+        url('fonts/subset-AvenirLTStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('fonts/subset-AvenirLTStd-Book.woff2') format('woff2'),
+        url('fonts/subset-AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*** Estilos Globais - Início ***/
+* { /* reset estilos padrão */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background: #F4F4F4;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+}
+
+p {
+    font-family: 'Roboto';
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+/*** Estilos Globais - Fim ***/
+
+/*** Container Maior 1170px ***/
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1170px;
+        margin-right: auto;
+        margin-left: auto; 
+        padding-right: 15px;
+        padding-left: 15px;
+	}   
+}
+
+
+/*** Container Menor 1170px ***/
+@media (max-width: 1199px) { 
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+        padding: 0 10px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }    
+
+    /*** cabeçalho ***/
+    nav {
+        padding: 12px 10px;;
+    }
+
+    /*** Blog ***/
+    .colunas-blog {
+        -ms-flex: 0 0 66%;
+        flex: 0 0 66%;
+        max-width: 100%; 
+    }
+
+    /*** Single Blog ***/
+    .coluna-single {
+        width: 100% !important;
+        padding: 20px 20px 40px !important;
+    }
+
+    .coluna-single img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*** Pagina interna ***/
+    .coluna-page {
+        width: 100%;
+    }
+}
+
+
+/*** Cabeçalho - inicio ***/
+header {
+    background: #05CFFC;
+    padding: 12px 0;
+}
+
+nav {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.link-sobre {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #01758D;
+    padding: 8px 16px;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.link-sobre:hover {
+    background: #E5E5E5;
+}
+
+/*** Cabeçalho - fim ***/
+
+/*** Blog - inicio ***/
+.topo-blog {
+    background: url(imgs/background-blog.jpg) no-repeat center center;
+    background-size: cover;
+    height: 66vh;
+    position: relative; 
+    z-index: 1;
+}
+
+.topo-blog h1 {    
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 109%;
+    color: #FFFFFF;
+    padding-top: 222px;
+}
+
+.secao-posts {
+    margin-top: -93px;
+    position: relative; 
+    z-index: 2;
+}
+
+.colunas-blog {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 370px;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;  
+    margin-bottom: 30px;  
+}
+
+.card-blog {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;    
+}
+
+.card-blog a {
+    text-decoration: none;
+}
+
+.attachment-imagem-loopblog  {
+    border-radius: 4px 4px 0px 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.cat-blog {
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666666;
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    right: 18px;
+    padding: 4px 12px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.box-resumo {
+    padding: 30px;
+    display: inline-block;
+}
+
+.box-resumo h2 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 130%;
+    color: #01758D;
+}
+
+.box-resumo p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin-top: 8px;
+    min-height: 90px;
+}
+
+.box-resumo span {
+    font-family: 'Avenir LT Std';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    color: #01758D;
+    margin-top: 40px;
+    display: inline-block;
+}
+/*** Blog - fim ***/
+
+/*** Single Blog - inicio ***/
+.topo-single {
+    background: url(imgs/background-single.png) no-repeat center center;
+    background-size: cover;
+    height: 66vh;
+    position: relative; 
+    z-index: 1;
+}
+
+.secao-single {
+    margin-top: -240px;
+    position: relative; 
+    z-index: 2;    
+}
+
+.coluna-single {
+    background: #FFFFFF;
+    padding: 45px 58px 80px 50px;
+    width: 692px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #525252
+}
+
+.cat-single {
+    margin-top: 28px;
+    background: #01758D;
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    width: fit-content;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.box-publicado {
+    margin-top: 23px;
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #939393;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.box-publicado span {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.box-publicado p {
+    color: #525252;
+}
+
+span.tags {
+    padding-left: 22px;
+}
+
+.content-single {
+    margin-top: 5px;
+}
+
+.content-single h1 {
+    font-family: 'Avenir LT Std';
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 130%;
+    color: #525252;
+    text-transform: uppercase;
+}
+
+.content-single h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.author-single {
+    font-family: 'Avenir LT Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #939393;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/*** Single Blog - fim ***/
+
+/*** Pagina interna - inicio ***/
+.secao-page {
+    padding: 60px 0 80px;
+}
+
+.row-interna {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.coluna-page {
+    width: 872px;
+}
+
+.coluna-page h1 {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 109%;
+    color: #01758D;
+}
+
+.coluna-page h2 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 130%;
+    color: #525252;
+}
+
+.coluna-page h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.coluna-page {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;    
+    color: #525252;
+}
+/*** Pagina interna - fim ***/
+
+/*** Rodapé - inicio ***/
+footer {
+    background: #05CFFC;
+    padding: 24px 0 37px;
+    margin-top: 50px;
+}
+
+footer a {
+    display: inline-block;
+}
+
+footer hr {
+    border-top: 1px solid #FFFFFF;
+    margin-top: 14px;
+}
+
+footer span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF; 
+    display: flex;  
+    margin-top: 16px;   
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+/*** Rodapé - fim ***/
+
+/**** Estilo Mobile - inicio ***/
+@media (max-width: 600px) {
+
+    /*** Blog ***/
+    .topo-blog {       
+        height: 34vh;
+    }
+
+    .topo-blog h1 {
+        padding-top: 60px;
+        font-size: 32px;
+        margin: 0 12px;
+    }
+
+    .secao-posts {
+        margin-top: -33px;
+    }
+
+    .colunas-blog {
+        margin: 0 auto 30px;
+    }
+
+    /*** Sigle Blog ***/
+    .topo-single {
+        height: 34vh;
+    }
+    .secao-single {
+        margin-top: -150px;
+    }
+
+    .content-single h1 {    
+        font-size: 26px;
+    }
+
+    .box-publicado {   
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    .content-single {       
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .content-single h2 {     
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    /*** Pagina interna - inicio ***/
+    .secao-page {
+        padding: 30px 0 40px;
+    }
+
+    .coluna-page h1 {
+        font-weight: 600;
+        font-size: 34px;    
+    }
+
+    .coluna-page h2 {
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    .coluna-page h3 {   
+        font-weight:600;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .coluna-page {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;   
+    }  
+    
+    /*** rodape ***/
+    footer {
+        text-align: center;
+    }
+
+    footer span {
+        justify-content: center;
+    }
+}
+
+/**** Estilo Mobile - fim ***/
