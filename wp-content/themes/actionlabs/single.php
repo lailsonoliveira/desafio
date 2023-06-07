@@ -20,7 +20,7 @@
                 $the_cat = get_the_category();
                 $category_name = $the_cat[0]->cat_name;
                 $category_link = get_category_link( $the_cat[0]->cat_ID );     
-                ?>
+                ?> 
 
                 <div class="cat-single"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></div>
 
