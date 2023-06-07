@@ -42,7 +42,7 @@
                             $category_name = $the_cat[0]->cat_name;
                             $category_link = get_category_link( $the_cat[0]->cat_ID );     
                         ?>
-                        <div class="cat-blog" href="<?php echo esc_url( $category_link ); ?>" title="<?php $cat = get_the_category(); echo $cat[0]->cat_name; ?>"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></div>
+                        <div class="cat-blog"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></div>
                         
                         <a class="box-resumo" href="<?php the_permalink();?>" title="<?php the_title(); ?>">
                         
