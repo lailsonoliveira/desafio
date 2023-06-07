@@ -22,7 +22,7 @@
                 $category_link = get_category_link( $the_cat[0]->cat_ID );     
                 ?>
 
-                <div class="cat-single" href="<?php echo esc_url( $category_link ); ?>" title="<?php $cat = get_the_category(); echo $cat[0]->cat_name; ?>"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></div>
+                <div class="cat-single"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></div>
 
                 <div class="box-publicado">
 
